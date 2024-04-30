@@ -42,7 +42,10 @@ class ResultFragment : Fragment() {
         lifecycleScope.launch {
             resultViewModel.resultStateFlow.collect { results ->
                 Timber.d("Result observeViewModel $results")
-                results.content?.let { loadDrawings(it) }
+                results.content?.let {
+                    binding.progressCircular.visibility = View.GONE
+                    loadDrawings(it)
+                }
             }
         }
     }

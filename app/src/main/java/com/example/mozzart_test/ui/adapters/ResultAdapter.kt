@@ -9,6 +9,7 @@ import com.example.mozzart_test.R
 import com.example.mozzart_test.data.model.Content
 import com.example.mozzart_test.databinding.ItemResultBinding
 import com.example.mozzart_test.utils.Constants
+import com.example.mozzart_test.utils.toHourMinuteFormat
 import timber.log.Timber
 
 class ResultAdapter(private var contentList: MutableList<Content> = mutableListOf()) :
@@ -45,7 +46,12 @@ class ResultAdapter(private var contentList: MutableList<Content> = mutableListO
                     root.context,
                     R.string.result_header_text
                 )
-                textViewHeader.text = formattedString
+                textViewHeader.text =
+                    String.format(
+                        formattedString,
+                        content.drawTime?.toHourMinuteFormat(),
+                        content.drawId
+                    )
                 val ballAdapter = content.winningNumbers?.list?.let { balls -> BallAdapter(balls) }
                 recyclerViewBall.apply {
                     layoutManager = GridLayoutManager(context, Constants.RESULT_BALL_COLUMN)

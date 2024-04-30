@@ -21,7 +21,7 @@ class DateTimeFormatter {
     }
 
     /**
-     * function that return start time od today in millos
+     * function that return start time od today in millis
      */
     fun getStartOfDayInMillis(): Long {
         val calendar = Calendar.getInstance().apply {

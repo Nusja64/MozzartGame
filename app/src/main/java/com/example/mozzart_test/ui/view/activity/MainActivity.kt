@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mozzart_test.data.model.DrawData
 import com.example.mozzart_test.databinding.ActivityMainBinding
 import com.example.mozzart_test.ui.adapters.DrawAdapter
+import com.example.mozzart_test.utils.toHourMinuteFormat
 import com.example.mozzart_test.viewmodel.DrawViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -38,9 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun setupRecyclerView() {
-        //TODO DEFINE MAIN COLORS THEME IN APPS align with material design
         drawAdapter = DrawAdapter { openDrawDetails(it) }
         binding.recyclerViewDraws.apply {
             adapter = drawAdapter
@@ -56,13 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openDrawDetails(drawData: DrawData?) {
-//        Toast.makeText(
-//            this,
-//            "TIME is ${draw?.drawTime} and id is ${draw?.drawId}",
-//            Toast.LENGTH_SHORT
-//        ).show()
         val intent = Intent(this, ResultActivity::class.java)
-      //  intent.putExtra(Constants.DRAW_ID, draw.drawId)
         startActivity(intent)
     }
 }
