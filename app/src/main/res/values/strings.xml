@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mozzart Kino</string>
+    <string name="app_title">Grcki Kino (20/80)</string>
+    <string name="time_title">Vreme izvlacenja</string>
+    <string name="timer_title">Preostalo za uplatu</string>
+    <string name="button_random">Slučajni odabir</string>
+    <string name="numbers">Brojeva</string>
+    <string name="result_header_text">Vreme izvlacenja: %1$s | Kolo : %2$d.</string>
+</resources>

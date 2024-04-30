@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_silver"
+        tools:text="Vreme izvlacenja : %1$s  | Kolo : 1908272"
+        android:textColor="@color/white"
+        android:padding="@dimen/text_view_padding"
+        android:textSize="@dimen/text_view_size"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:nestedScrollingEnabled="false"
+        android:numColumns="7"
+        tools:listitem="@layout/item_ball"
+        android:overScrollMode="never" />
+
+</LinearLayout>

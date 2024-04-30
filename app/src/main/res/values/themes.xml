@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MozzartTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="Theme.MozzartTheme" parent="Base.Theme.MozzartTheme" />
+</resources>
